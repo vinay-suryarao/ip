@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Business Home</title>
+    <style>
+        * {
+            box-sizing: border-box; /* Ensures padding doesn't affect final width */
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background: #2c3e50;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: #fff;
+            margin-top: 30px;
+        }
+
+        section {
+            padding: 20px;
+            margin-bottom: 20px;
+            background: #ffffff;
+            border-radius: 8px;
+        }
+
+        h1, h2 {
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 960px;
+            margin: 20px auto;
+        }
+
+        .nav-links {
+            list-style: none;
+            padding: 10px 0 0 0;
+        }
+
+        .nav-links li {
+            display: inline;
+            margin: 0 15px;
+        }
+        
+        .nav-link {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .service-box {
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #f39c12;
+            color: #2c3e50;
+            padding: 12px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+
+        #hero {
+            background: #3498db;
+            color: white;
+            text-align: center;
+        }
+
+        #hero h1 {
+            color: white;
+            font-size: 2.5em;
+        }
+
+        header a {
+            color: #f39c12; /* Special color for links in header */
+        }
+        
+        .nav-link:hover {
+            text-decoration: underline;
+        }
+
+        .cta-button:hover {
+            background: #e68e00;
+        }
+        
+        a[href="#about"] {
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="container">
+            <h1>MyBusiness</h1>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <section id="hero">
+            <h1>Welcome to Our Website</h1>
+            <p>Your one-stop solution for all business needs.</p>
+            <a href="#contact" class="cta-button">Get in Touch</a>
+        </section>
+
+        <section id="services">
+            <h2>Our Services</h2>
+            <div class="service-box">
+                <h3>Service One</h3>
+                <p>Description of the first amazing service we offer.</p>
+            </div>
+            <div class="service-box">
+                <h3>Service Two</h3>
+                <p>Description of the second amazing service we offer.</p>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>We are a team of dedicated professionals committed to providing the best services in the industry. Our mission is to help your business grow and succeed.</p>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 MyBusiness. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+

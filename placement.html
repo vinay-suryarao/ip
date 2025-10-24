@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placement Registration Form</title>
+</head>
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f0f2f5; color: #333;">
+
+    <div style="width: 80%; max-width: 900px; margin: 30px auto; padding: 0;">
+
+        <!-- Title Header --><div style="background-color: #6c757d; color: white; padding: 20px; text-align: center; margin-bottom: 20px; border-radius: 8px 8px 0 0;">
+            <h1 style="margin: 0; font-size: 2em;">Placement registration form</h1>
+        </div>
+
+        <!-- Basic Info Section --><div style="background-color: #daa520; padding: 20px; margin-bottom: 20px; border-radius: 8px;">
+            <h3 style="margin-top: 0; color: #333;">Basic info</h3>
+            <div style="margin-bottom: 15px;">
+                <label for="name" style="display: inline-block; width: 120px; font-weight: bold;">name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" style="width: calc(100% - 130px); padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label for="modid" style="display: inline-block; width: 120px; font-weight: bold;">Modid id:</label>
+                <input type="text" id="modid" name="modid" placeholder="Enter your Modid" style="width: calc(100% - 130px); padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label for="email" style="display: inline-block; width: 120px; font-weight: bold;">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" style="width: calc(100% - 130px); padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label for="password" style="display: inline-block; width: 120px; font-weight: bold;">password:</label>
+                <input type="password" id="password" name="password" value="" placeholder="Enter your password" style="width: calc(100% - 130px); padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label style="display: inline-block; width: 120px; font-weight: bold;">Gender:</label>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male" style="margin-right: 15px;">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female" style="margin-right: 15px;">Female</label>
+                <input type="radio" id="others" name="gender" value="others">
+                <label for="others">Others</label>
+            </div>
+        </div>
+
+        <!-- Academic Details Section --><div style="background-color: #e0e5a9; padding: 20px; margin-bottom: 20px; border-radius: 8px;">
+            <h3 style="margin-top: 0; color: #333;">Academic Details</h3>
+            <div style="margin-bottom: 15px;">
+                <label for="year" style="display: inline-block; width: 120px; font-weight: bold;">Select yr:</label>
+                <select id="year" name="year" style="width: calc(100% - 130px); padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+                    <option value="" selected disabled>-- Select Year --</option>
+                    <option value="first">First Year</option>
+                    <option value="second">Second Year</option>
+                    <option value="third">Third Year</option>
+                    <option value="fourth">Fourth Year</option>
+                </select>
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label for="branch" style="display: inline-block; width: 120px; font-weight: bold;">branch:</label>
+                <select id="branch" name="branch" style="width: calc(100% - 130px); padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+                    <option value="" selected disabled>-- Select Branch --</option>
+                    <option value="cs">Computer Science</option>
+                    <option value="it">Information Engg</option>
+                    <option value="ece">Electronics & Communication</option>
+                    <option value="me">Mechanical Engg</option>
+                </select>
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label for="domain" style="display: inline-block; width: 120px; font-weight: bold;">Domain:</label>
+                <select id="domain" name="domain" style="width: calc(100% - 130px); padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+                    <option value="" selected disabled>-- Select Domain --</option>
+                    <option value="webdev">Web Development</option>
+                    <option value="datascience">Data Science</option>
+                    <option value="devops">DevOps</option>
+                    <option value="cybersecurity">Cyber Security</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Personal Details Section --><div style="background-color: #92b0b7; padding: 20px; margin-bottom: 20px; border-radius: 8px;">
+            <h3 style="margin-top: 0; color: #333;">Personal details</h3>
+            <div style="margin-bottom: 15px;">
+                <label for="address" style="display: inline-block; width: 120px; font-weight: bold; vertical-align: top;">Residential address:</label>
+                <textarea id="address" name="address" rows="3" style="width: calc(100% - 130px); padding: 8px; border: 1px solid #ccc; border-radius: 4px;" placeholder="Enter your residential address"></textarea>
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label for="office_address" style="display: inline-block; width: 120px; font-weight: bold; vertical-align: top;">Office address:</label>
+                <textarea id="office_address" name="office_address" rows="2" style="width: calc(100% - 130px); padding: 8px; border: 1px solid #ccc; border-radius: 4px;" placeholder="Enter your office address (if any)"></textarea>
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label for="phone" style="display: inline-block; width: 120px; font-weight: bold;">Phone no:</label>
+                <select style="padding: 8px; border: 1px solid #ccc; border-radius: 4px; margin-right: 5px;">
+                    <option value="+91">+91</option>
+                    <option value="+1">+1</option>
+                </select>
+                <input type="tel" id="phone" name="phone" value="" placeholder="Enter phone number" style="width: calc(100% - 200px); padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+            </div>
+        </div>
+
+        <!-- Uploads Section --><div style="background-color: #556b2f; padding: 20px; margin-bottom: 20px; border-radius: 8px;">
+            <h3 style="margin-top: 0; color: white;">Uploads</h3>
+            <div style="margin-bottom: 15px;">
+                <label for="resume" style="display: inline-block; width: 150px; color: white;">Upload Resume:</label>
+                <input type="file" id="resume" name="resume" style="display: none;">
+                <label for="resume" style="background-color: #f0f0f0; padding: 8px 12px; border-radius: 4px; cursor: pointer; border: 1px solid #ccc; color: #333;">Choose file</label>
+                <span style="color: white; margin-left: 10px;">No file chosen</span>
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label for="marksheet10th" style="display: inline-block; width: 150px; color: white;">Upload 10th marksheet:</label>
+                <input type="file" id="marksheet10th" name="marksheet10th" style="display: none;">
+                <label for="marksheet10th" style="background-color: #f0f0f0; padding: 8px 12px; border-radius: 4px; cursor: pointer; border: 1px solid #ccc; color: #333;">Choose file</label>
+                <span style="color: white; margin-left: 10px;">No file chosen</span>
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label for="marksheet12th" style="display: inline-block; width: 150px; color: white;">Upload 12th marksheet:</label>
+                <input type="file" id="marksheet12th" name="marksheet12th" style="display: none;">
+                <label for="marksheet12th" style="background-color: #f0f0f0; padding: 8px 12px; border-radius: 4px; cursor: pointer; border: 1px solid #ccc; color: #333;">Choose file</label>
+                <span style="color: white; margin-left: 10px;">No file chosen</span>
+            </div>
+        </div>
+
+        <!-- Submit Section --><div style="background-color: #8a2be2; padding: 20px; text-align: left; border-radius: 8px;">
+            <h3 style="margin-top: 0; color: white;">Uploads</h3>
+            <p style="color: white; margin-bottom: 15px;">SUBMIT NOW:</p>
+            <button type="submit" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 1em;">Submit</button>
+        </div>
+
+    </div>
+
+</body>
+</html>
+
+
