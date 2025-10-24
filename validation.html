@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form with Validation</title>
+    <!-- CSS hata diya hai code chhota karne ke liye -->
+    <style>
+        /* Thodi basic spacing ke liye */
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        div { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input[type="text"], input[type="email"], input[type="password"] { width: 300px; padding: 5px; }
+        button { padding: 10px 20px; }
+    </style>
+</head>
+<body>
+
+    <h2>Registration Form</h2>
+
+    <form id="registrationForm">
+        <!-- Name Field -->
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <!-- Error prompt div hata diya -->
+        </div>
+
+        <!-- Email Field -->
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+        </div>
+
+        <!-- Password Field -->
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+        </div>
+
+        <!-- Confirm Password Field -->
+        <div>
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword">
+        </div>
+
+        <!-- Gender Field -->
+        <div>
+            <label>Gender:</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male" style="display:inline;">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female" style="display:inline;">Female</label>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other" style="display:inline;">Other</label>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
+    </form>
+
+
+    <script>
+        // Form element ko select karna
+        const form = document.getElementById('registrationForm');
+
+        // Form submit hone par yeh function chalega
+        form.addEventListener('submit', function(event) {
+            // Form ko reload hone se rokna
+            event.preventDefault();
+            
+            // Validation function call karna
+            if (validateForm()) {
+                // Agar sab sahi hai
+                alert('Registration Successful!');
+                form.reset(); // Form ko reset kar dena
+            }
+        });
+
+        function validateForm() {
+            // Saare input fields ki values lena
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value.trim();
+            const confirmPassword = document.getElementById('confirmPassword').value.trim();
+            const genderSelected = document.querySelector('input[name="gender"]:checked');
+
+            // 1. Name Validation
+            if (name === '') {
+                alert('Name is required.'); // Alert prompt
+                return false; // Validation fail
+            }
+
+            // 2. Email Validation
+            if (email === '') {
+                alert('Email is required.');
+                return false;
+            }
+            // Basic email check
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!re.test(String(email).toLowerCase())) {
+                 alert('Please enter a valid email address.');
+                 return false;
+            }
+            
+            // 3. Password Validation
+            if (password === '') {
+                alert('Password is required.');
+                return false;
+            } 
+            if (password.length < 6) {
+                alert('Password must be at least 6 characters long.');
+                return false;
+            }
+
+            // 4. Confirm Password Validation
+            if (confirmPassword === '') {
+                alert('Please confirm your password.');
+                return false;
+            } 
+            if (password !== confirmPassword) {
+                alert('Passwords do not match.');
+                return false;
+            }
+            
+            // 5. Gender Validation
+            if (!genderSelected) {
+                alert('Please select your gender.');
+                return false;
+            }
+
+            // Agar sab kuch sahi hai
+            return true;
+        }
+
+    </script>
+
+</body>
+</html>
+

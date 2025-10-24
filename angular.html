@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-app>
+<h1>Demo for Angular js Directives</h1>
+<h2>{{'Vinay'}}</h2>
+{{2+3}} <br>
+{{4*9}}
+<p ng-bind="3+9"></p>
+<hr>
+<h3>Demo for Compound Interest</h3>
+<p>Department of Information Technology | APSIT</p>
+Principle: <input type="number" ng-model="prin"><br><br>
+Rate: <input type="number" ng-model="rate"><br><br>
+Time: <input type="number" ng-model="time"><br><br>
+Simple Interest Calculated as: {{prin*rate*time/100}}<br>
+<hr>
+<h1>Demo for Area of rectangle</h1>
+<div ng-init="l=20; b=30;">
+The value of the area is: {{l*b}}
+</div>
+</body>
+</html>
