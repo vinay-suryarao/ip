@@ -1,0 +1,145 @@
+
+Step1:
+ npx create-react-app myapp
+
+step2:
+cd myapp
+
+step3:
+npm start
+This opens your app in a browser automatically:
+
+http://localhost:3000
+
+step4 :
+go to App.js paste this 
+
+
+import React from "react";
+import Myclasscompo from "./Myclasscompo";
+import Myfunctioncompo from "./Myfunctioncompo";
+
+function App() {
+  return (
+    <div className="App">
+      <h1>React Components Example</h1>
+      <Myfunctioncompo />
+      <Myclasscompo />
+    </div>
+  );
+}
+
+export default App;
+
+
+
+step5 :
+go to src create new file with name Myfunctioncompo.js
+
+paste this code:
+
+import React from "react";
+
+function Myfunctioncompo() {
+  return (
+    <div>
+      <h1>Department of Information Technology | APSIT</h1>
+      <h2>Demo for Function Component</h2>
+
+      {/* THE FIX: 
+        - Removed border="2"
+        - Added border styles to the style prop 
+      */}
+      <table
+        cellPadding="10"
+        style={{
+          margin: "15px auto",
+          border: "1px solid black",
+          borderCollapse: "collapse",
+        }}
+      >
+        <thead>
+          <tr style={{ backgroundColor: "yellow" }}>
+            <th>Activity</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style={{ backgroundColor: "pink" }}>
+            <td>Project space updation</td>
+            <td>Pending</td>
+          </tr>
+          <tr style={{ backgroundColor: "lightblue" }}>
+            <td>Assignment</td>
+            <td>Done</td>
+          </tr>
+          <tr style={{ backgroundColor: "lightgreen" }}>
+            <td>React session</td>
+            <td>Ongoing</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+export default Myfunctioncompo;
+
+
+step5:
+go to src create new file with name Myclasscompo.js
+
+import React, { Component } from "react";
+
+class Myclasscompo extends Component {
+  render() {
+    return (
+      <div>
+        <h1>Student Information Form</h1>
+        <form>
+          <label>
+            Name:
+            <input type="text" name="name" />
+          </label>
+          <br /><br />
+          <label>
+            Branch:
+            <input type="text" name="branch" />
+          </label>
+          <br /><br />
+          <label>
+            Year:
+            <input type="text" name="year" />
+          </label>
+          <br /><br />
+          <label>
+            Gender:
+            <input type="radio" name="gender" value="Male" /> Male
+            <input type="radio" name="gender" value="Female" /> Female
+          </label>
+          <br /><br />
+          <label>
+            Address:
+            <textarea name="address"></textarea>
+          </label>
+          <br /><br />
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    );
+  }
+}
+
+export default Myclasscompo;
+
+
+
+
+---main step---
+step6:
+import this in your App.js
+import Myfunctioncompo from './Myfunctioncompo';
+import Myclasscompo from './Myclasscompo';
+
+step7: to run 
+npm start
