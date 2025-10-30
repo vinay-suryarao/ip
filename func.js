@@ -1,8 +1,22 @@
-5.Write a program to implement ES6 functions.
+/* Normal Function */ 
+
+function check(num){
+if (num%2!=0){
+console.log("Number is odd")
+}
+else if(num==0){
+console.log("Number is 0")
+}
+else{
+console.log("Number is even")
+}
+}
+check(0)
+check(2)
+check(3)
 
 
-code1:
-leap.js
+/* Arrow Function */ 
 
 const isLeapYear = (year) => {
   if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
@@ -15,14 +29,8 @@ const isLeapYear = (year) => {
 isLeapYear(2024); 
 isLeapYear(2023);
 
-----------------------------------
-node leap.js
 
-
-
-
-code2:
-addition.js
+/* rest parameter */ 
 const sumSeries = (...numbers) => {   
   let sum = 0;
   for (let num of numbers) {          
@@ -33,19 +41,12 @@ const sumSeries = (...numbers) => {
 
 console.log(sumSeries(1, 2, 3, 4, 5));  
 console.log(sumSeries(10, 20, 30));      
-------------------------------------
-node addition.js
 
-
-
-
-code3:
-anonymous.js
+/* Anonymous Function */ 
 
 const greet = function() {
   console.log("Hello, welcome!");
 };
 
 greet();
---------------------------------------
-node anonymous.js
+
