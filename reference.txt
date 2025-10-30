@@ -1,0 +1,76 @@
+10)Write a program to implement React JS
+Refs. 
+
+step1:
+ npx create-react-app react-refs-exp
+
+step2:
+  cd react-refs-exp
+  npm start
+
+step3:
+create new file in src name Userref.js
+import React, { Component } from 'react'
+
+export default class Userref extends Component {
+  
+  constructor(props) {
+    super(props);
+    // 1. Create the ref
+    this.Userref = React.createRef();
+    this.state = {
+      hidden: false,
+    };
+  }
+
+  change = () => {
+    // 3. Add a check to prevent crashing
+    if (this.Userref.current) {
+      this.Userref.current.style.color = 'pink';
+      this.Userref.current.style.fontSize = '70px';
+      this.Userref.current.style.fontFamily = 'Arial';
+      this.Userref.current.value = "Your Name Here";
+    }
+  };
+
+  hide = () => {
+    // 2. This hides the input and sets the ref to null
+    this.setState({ hidden: true });
+  };
+
+  render() {
+    return (
+      <div>
+        <h1>Demo</h1>
+     
+        {!this.state.hidden && (
+          <input ref={this.Userref} type="text" />
+        )}
+        <button onClick={this.change}>Click me</button>
+        <button onClick={this.hide}>Hide</button>
+      </div>
+    );
+  }
+}
+
+step4:
+paste this in App.js
+
+import React from 'react';
+import './App.css';
+import Userref from './Userref'; 
+
+function App() {
+  return (
+    <div className="App">
+      <Userref />
+    </div>
+  );
+}
+
+export default App;
+
+
+step5:
+run using 
+npm start
